@@ -1,7 +1,7 @@
 ﻿// Student.cs
 using SQLite;
 
-public class Student
+public class Employee
 {
     [PrimaryKey, AutoIncrement]
     public int Id { get; set; }
