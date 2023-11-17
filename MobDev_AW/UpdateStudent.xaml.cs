@@ -19,7 +19,7 @@ public partial class UpdateStudent : ContentPage
         // Populate the input fields with the existing student details
         GivenNameEntry.Text = _selectedStudent.GivenName;
         FamilyNameEntry.Text = _selectedStudent.FamilyName;
-        StudentNumberEntry.Text = _selectedStudent.StudentNumber;
+        CountryEntry.Text = _selectedStudent.Country;
         EnrollmentDatePicker.Date = _selectedStudent.EnrollmentDate;
 
         PhoneEntry.Text = _selectedStudent.Phone;
@@ -40,7 +40,7 @@ public partial class UpdateStudent : ContentPage
         // Update the selected student's information
         _selectedStudent.GivenName = GivenNameEntry.Text;
         _selectedStudent.FamilyName = FamilyNameEntry.Text;
-        _selectedStudent.StudentNumber = StudentNumberEntry.Text;
+        _selectedStudent.Country = CountryEntry.Text;
         _selectedStudent.EnrollmentDate = EnrollmentDatePicker.Date;
 
         _selectedStudent.Phone = PhoneEntry.Text;

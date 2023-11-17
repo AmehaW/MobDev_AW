@@ -5,10 +5,55 @@
              Title="Settings">
     <StackLayout>
         <VerticalStackLayout>
-            <Label 
-                Text="Welcome to .NET MAUI!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0">ENTER YOUR NAME</Label>
+                <Entry Grid.Column="0" x:Name="NameEntry"></Entry>
+
+                <Label Grid.Row="1">Change Theme</Label>
+                <Switch x:Name="togTheme" Grid.Row="2" Toggled="OnThemeSwitchToggled" BackgroundColor="DimGrey" />
+
+                <Label Grid.Column="1">ENTER YOUR AGE</Label>
+                <Entry Grid.Column="1" x:Name="AgeEntry"></Entry>
+
+                <Label Grid.Row="2" Grid.Column="1">ENTER SOME NEW DATA</Label>
+                <Entry Grid.Row="3" Grid.Column="1" x:Name="someEntry"></Entry>
+
+                <!-- Brightness Slider -->
+                <Label Text="Brightness" Grid.Row="4" Grid.Column="1"/>
+                <Slider x:Name="brightnessSlider" 
+                        Minimum="0" Maximum="20" 
+                        Value="{Binding Brightness}" 
+                        Grid.Row="5" Grid.Column="1"/>
+
+                <!-- Font Size Slider -->
+                <Label Text="Font Size" Grid.Row="6" Grid.Column="1" />
+                <Slider x:Name="fontSizeSlider" Minimum="10" Maximum="30" Value="{Binding FontSize}" Grid.Row="7" Grid.Column="1" />
+
+                <!-- Font Family Picker -->
+                <Label Text="Font Family" Grid.Row="8" Grid.Column="1"/>
+                <Picker x:Name="fontFamilyPicker" ItemsSource="{Binding FontFamilies}" SelectedItem="{Binding SelectedFontFamily}" Grid.Row="9" Grid.Column="1" />
+
+                <!-- Save Button -->
+                <Button Grid.Row="10" Grid.Column="1" Clicked="SaveSettings_Clicked" Text="SAVE USER SETTINGS"></Button>
+            </Grid>
         </VerticalStackLayout>
     </StackLayout>
 </ContentPage>

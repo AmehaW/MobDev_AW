@@ -100,7 +100,7 @@ namespace MobDev_AW
             {
                 GivenName = GivenNameEntry.Text,
                 FamilyName = FamilyNameEntry.Text,
-                StudentNumber = StudentNumberEntry.Text,
+                Country = StudentCountry.Text,
                 EnrollmentDate = EnrollmentDatePicker.Date,
 
                 Phone = PhoneEntry.Text,
@@ -121,7 +121,7 @@ namespace MobDev_AW
             //Un-comment for pop-ups/troubleshooting
             //await DisplayAlert("Add Student","You Added a student","Ok");
 
-            GivenNameEntry.Text = FamilyNameEntry.Text = StudentNumberEntry.Text = string.Empty;
+            GivenNameEntry.Text = FamilyNameEntry.Text = StudentCountry.Text = string.Empty;
             LoadStudentsAsync();
             //Add UI refresh command here
         }

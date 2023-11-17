@@ -11,7 +11,7 @@
 
                 <Entry Placeholder="Given Name" x:Name="GivenNameEntry" />
                 <Entry Placeholder="Family Name" x:Name="FamilyNameEntry" />
-                <Entry Placeholder="Student Number" x:Name="StudentNumberEntry" />
+                <Entry Placeholder="Country" x:Name="StudentCountry" />
                 <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />
                 <Entry Placeholder="Phone" x:Name="PhoneEntry" />
                 <Entry Placeholder="Department" x:Name="DepartmentEntry" />
@@ -65,31 +65,29 @@
 
                                             <!-- Student Information Cont. -->
                                             <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="2">
-                                                <Label Text="Student Number:" Padding="0,0,2,0"/>
-                                                <Label Text="{Binding StudentNumber}" Margin="10,0,0,0"/>
-                                            </StackLayout>
-
-                                            <!-- Student Information Cont. -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="3">
                                                 <Label Text="Enrollment Date:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding EnrollmentDate, StringFormat='{0:dd/MM/yyyy}'}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- Student Information Cont. -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="4">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="3">
                                                 <Label Text="Phone:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding Phone}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- Student Information Cont. -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="5">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="4">
                                                 <Label Text="Department:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding Department}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
 
 
-
+                                            <!-- Student Information Cont. -->
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="9">
+                                                <Label Text="Country:" Padding="0,0,2,0"/>
+                                                <Label Text="{Binding Country}" Margin="10,0,0,0"/>
+                                            </StackLayout>
 
                                             <!-- Buttons -->
                                             <StackLayout Orientation="Horizontal" Padding="5" Grid.Row="10">

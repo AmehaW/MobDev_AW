@@ -9,7 +9,7 @@
                 <!-- Input Fields for Updating Student Details -->
                 <Entry Placeholder="Given Name" x:Name="GivenNameEntry"  />
                 <Entry Placeholder="Family Name" x:Name="FamilyNameEntry" />
-                <Entry Placeholder="Student Number" x:Name="StudentNumberEntry" />
+                <Entry Placeholder="Country" x:Name="CountryEntry" />
                 <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />
                 <Entry Placeholder="Phone" x:Name="PhoneEntry" />
                 <Entry Placeholder="Department" x:Name="DepartmentEntry" />

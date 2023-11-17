@@ -9,7 +9,7 @@
                 <!-- Display Student Details Here -->
                 <Label Text="{Binding GivenName}" />
                 <Label Text="{Binding FamilyName}" />
-                <Label Text="{Binding StudentNumber}" />
+                <Label Text="{Binding Country}" />
                 <Label Text="{Binding EnrollmentDate}" />
 
                 <Label Text="{Binding Phone}" />

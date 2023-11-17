@@ -7,7 +7,6 @@ public class Student
     public int Id { get; set; }
     public string GivenName { get; set; }
     public string FamilyName { get; set; }
-    public string StudentNumber { get; set; }
     public DateTime EnrollmentDate { get; set; }
 
     public string Phone { get; set; }
@@ -19,5 +18,7 @@ public class Student
 
     public string State { get; set; }
     public string ZipCode { get; set; }
+
+    public string Country { get; set; }
 
 }
