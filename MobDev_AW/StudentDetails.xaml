@@ -9,16 +9,15 @@
                 <!-- Display Student Details Here -->
                 <Label Text="{Binding GivenName}" />
                 <Label Text="{Binding FamilyName}" />
-                <Label Text="{Binding Country}" />
-                <Label Text="{Binding EnrollmentDate}" />
-
                 <Label Text="{Binding Phone}" />
                 <Label Text="{Binding Department}" />
                 <Label Text="{Binding Street}" />
                 <Label Text="{Binding City}" />
                 <Label Text="{Binding State}" />
                 <Label Text="{Binding ZipCode}" />
-                
+                <Label Text="{Binding Country}" />
+                <Label Text="{Binding EnrollmentDate}" />
+
                 <!-- Add any other details you want to display -->
             </StackLayout>
         </Frame>

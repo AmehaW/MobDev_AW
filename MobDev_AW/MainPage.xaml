@@ -11,15 +11,14 @@
 
                 <Entry Placeholder="Given Name" x:Name="GivenNameEntry" />
                 <Entry Placeholder="Family Name" x:Name="FamilyNameEntry" />
-                <Entry Placeholder="Country" x:Name="StudentCountry" />
-                <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />
                 <Entry Placeholder="Phone" x:Name="PhoneEntry" />
                 <Entry Placeholder="Department" x:Name="DepartmentEntry" />
                 <Entry Placeholder="Street" x:Name="StreetEntry" />
                 <Entry Placeholder="City" x:Name="CityEntry" />
                 <Entry Placeholder="State" x:Name="StateEntry" />
                 <Entry Placeholder="Zip Code" x:Name="ZipCodeEntry" />
-                
+                <Entry Placeholder="Country" x:Name="StudentCountry" />
+                <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />
 
                 <!-- Add Student Button -->
                 <Button Text="Add Student" Clicked="AddStudent_Clicked" HorizontalOptions="StartAndExpand" />
@@ -33,6 +32,7 @@
                                     <Frame CornerRadius="10" Margin="10" BackgroundColor="#F0F0F0">
                                         <Grid>
                                             <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
                                                 <RowDefinition Height="Auto"/>
                                                 <RowDefinition Height="Auto"/>
                                                 <RowDefinition Height="Auto"/>
@@ -63,30 +63,52 @@
                                                 <Label Text="{Binding FamilyName}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
-                                            <!-- Student Information Cont. -->
+                                            <!-- Phone -->
                                             <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="2">
-                                                <Label Text="Enrollment Date:" Padding="0,0,2,0"/>
-                                                <Label Text="{Binding EnrollmentDate, StringFormat='{0:dd/MM/yyyy}'}" Margin="10,0,0,0"/>
-                                            </StackLayout>
-
-                                            <!-- Student Information Cont. -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="3">
                                                 <Label Text="Phone:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding Phone}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
-                                            <!-- Student Information Cont. -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="4">
+                                            <!-- Department -->
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="3">
                                                 <Label Text="Department:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding Department}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
+                                            <!-- Street -->
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="4">
+                                                <Label Text="Street:" Padding="0,0,2,0"/>
+                                                <Label Text="{Binding Street}" Margin="10,0,0,0"/>
+                                            </StackLayout>
 
+                                            <!-- City -->
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="5">
+                                                <Label Text="City:" Padding="0,0,2,0"/>
+                                                <Label Text="{Binding City}" Margin="10,0,0,0"/>
+                                            </StackLayout>
+
+                                            <!-- State -->
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="6">
+                                                <Label Text="State:" Padding="0,0,2,0"/>
+                                                <Label Text="{Binding State}" Margin="10,0,0,0"/>
+                                            </StackLayout>
+
+                                            <!-- Zip Code -->
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="7">
+                                                <Label Text="Zip Code:" Padding="0,0,2,0"/>
+                                                <Label Text="{Binding ZipCode}" Margin="10,0,0,0"/>
+                                            </StackLayout>
+
+                                            <!-- Country -->
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="8">
+                                                <Label Text="Country:" Padding="0,0,2,0"/>
+                                                <Label Text="{Binding Country}" Margin="10,0,0,0"/>
+                                            </StackLayout>
 
                                             <!-- Student Information Cont. -->
                                             <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="9">
-                                                <Label Text="Country:" Padding="0,0,2,0"/>
-                                                <Label Text="{Binding Country}" Margin="10,0,0,0"/>
+                                                <Label Text="Enrollment Date:" Padding="0,0,2,0"/>
+                                                <Label Text="{Binding EnrollmentDate, StringFormat='{0:dd/MM/yyyy}'}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- Buttons -->
