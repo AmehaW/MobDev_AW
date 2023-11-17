@@ -14,7 +14,7 @@ namespace MobDev_AW
         //CSV Database service to perform CRUD operations
         private DatabaseServiceCSV _databaseServiceCSV;
 
-        private List<Student> _students;
+        private List<Employee> _employee;
 
         public MainPage()
         {
@@ -29,62 +29,62 @@ namespace MobDev_AW
             //Manual clear
             //_databaseServiceSQL.ClearDatabase();
 
-            //Load Students
-            LoadStudentsAsync();
+            //Load Employee
+            LoadEmployeeAsync();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            // Load students from the database every time the page appears
-            LoadStudentsAsync();
+            // Load employees from the database every time the page appears
+            LoadEmployeeAsync();
         }
 
-        private async void UpdateStudent_Clicked(object sender, EventArgs e)
+        private async void UpdateEmployee_Clicked(object sender, EventArgs e)
         {
-            var selectedStudent = (Student)((Button)sender).BindingContext;
+            var selectedEmployee = (Employee)((Button)sender).BindingContext;
             //Added CSV -> sends both database services 
-            await Navigation.PushAsync(new UpdateStudent(selectedStudent, _databaseServiceSQL, _databaseServiceCSV));
+            await Navigation.PushAsync(new UpdateEmployee(selectedEmployee, _databaseServiceSQL, _databaseServiceCSV));
         }
 
-        private async void DeleteStudent_Clicked(object sender, EventArgs e)
+        private async void DeleteEmployee_Clicked(object sender, EventArgs e)
         {
-            var selectedStudent = (Student)((Button)sender).BindingContext;
-            bool result = await DisplayAlert("Delete Student", "Are you sure you want to delete this student?", "Yes", "No");
+            var selectedEmployee = (Employee)((Button)sender).BindingContext;
+            bool result = await DisplayAlert("Delete Employee", "Are you sure you want to delete this Employee?", "Yes", "No");
 
             if (result)
             {
                 //SQLiteVersion
-                await _databaseServiceSQL.DeleteStudentAsync(selectedStudent);
+                await _databaseServiceSQL.DeleteEmployeeAsync(selectedEmployee);
 
                 //CSV Version
-                //await _databaseServiceCSV.DeleteStudentAsync(selectedStudent);
+                //await _databaseServiceCSV.DeleteEmployeeAsync(selectedEmployee);
 
-                //await DisplayAlert("Delete Student", "You Deleted a student", "Ok");
-                // Reload the students list after deletion
-                LoadStudentsAsync();
+                //await DisplayAlert("Delete Employee", "You Deleted an employee", "Ok");
+                // Reload the employees list after deletion
+                LoadEmployeeAsync();
             }
         }
 
         private async void ViewDetails_Clicked(object sender, EventArgs e)
         {
-            var selectedStudent = (Student)((Button)sender).BindingContext;
-            await Navigation.PushAsync(new StudentDetails(selectedStudent));
+            var selectedEmployee = (Employee)((Button)sender).BindingContext;
+            await Navigation.PushAsync(new EmployeeDetails(selectedEmployee));
         }
 
-        private async void LoadStudentsAsync()
+        private async void LoadEmployeeAsync()
         {
             try
             {
                 //SQLite Version
-                _students = await _databaseServiceSQL.GetStudentsAsync();
+                _employee = await _databaseServiceSQL.GetEmployeeAsync();
 
-                //await DisplayAlert("Loading Students", "Loading Check", "Ok");
+                //await DisplayAlert("Loading Employee", "Loading Check", "Ok");
                 //CSV Version
-                //_students = await _databaseServiceCSV.GetStudentsAsync();
+                //_employee = await _databaseServiceCSV.GetEmployeeAsync();
 
-                StudentListView.ItemsSource = _students;
+                EmployeeListView.ItemsSource = _employee;
             }
             catch (Exception ex)
             {
@@ -92,37 +92,37 @@ namespace MobDev_AW
             }
         }
 
-        // Event handler for adding a new student
-        //Visual bug, Consider moving to new Add Student page.
-        private async void AddStudent_Clicked(object sender, EventArgs e)
+        // Event handler for adding a new employee
+        //Visual bug, Consider moving to new Add Employee page.
+        private async void AddEmployee_Clicked(object sender, EventArgs e)
         {
-            var newStudent = new Student
+            var newEmployee = new Employee
             {
                 GivenName = GivenNameEntry.Text,
                 FamilyName = FamilyNameEntry.Text,
-                Country = StudentCountry.Text,
-                EnrollmentDate = EnrollmentDatePicker.Date,
-
                 Phone = PhoneEntry.Text,
                 Department = DepartmentEntry.Text,
                 Street = StreetEntry.Text,
                 City = CityEntry.Text,
                 State = StateEntry.Text,
-                ZipCode = ZipCodeEntry.Text
-             
-        };
+                ZipCode = ZipCodeEntry.Text,
+                Country = Country.Text,
+                EnrollmentDate = EnrollmentDatePicker.Date
+
+            };
 
             //SQLite Version
-            await _databaseServiceSQL.AddStudentAsync(newStudent);
+            await _databaseServiceSQL.AddEmployeeAsync(newEmployee);
 
             //CSV Version
-            //await _databaseServiceCSV.AddStudentAsync(newStudent);
+            //await _databaseServiceCSV.AddEmployeeAsync(newEmployee);
 
             //Un-comment for pop-ups/troubleshooting
-            //await DisplayAlert("Add Student","You Added a student","Ok");
+            //await DisplayAlert("Add Employee","You Added an Employee","Ok");
 
-            GivenNameEntry.Text = FamilyNameEntry.Text = StudentCountry.Text = string.Empty;
-            LoadStudentsAsync();
+            GivenNameEntry.Text = FamilyNameEntry.Text = PhoneEntry.Text = DepartmentEntry.Text =
+                StreetEntry.Text = CityEntry.Text = StateEntry.Text = ZipCodeEntry.Text = Country.Text = string.Empty;
+            LoadEmployeeAsync();
             //Add UI refresh command here
         }
     }

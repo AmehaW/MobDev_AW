@@ -8,9 +8,9 @@ public class DatabaseService
 
     public DatabaseService()
     {
-        string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Student.db");
-        _database = new SQLiteAsyncConnection(dbPath);
-        _database.CreateTableAsync<Student>().Wait();
+        string dbasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Employee.db");
+        _database = new SQLiteAsyncConnection(dbasePath);
+        _database.CreateTableAsync<Employee>().Wait();
     }
 
     // Clear or truncate the SQLite database
@@ -18,8 +18,8 @@ public class DatabaseService
     {
         try
         {
-            _database.DropTableAsync<Student>();
-            _database.CreateTableAsync<Student>();
+            _database.DropTableAsync<Employee>();
+            _database.CreateTableAsync<Employee>();
         }
         catch (Exception ex)
         {
@@ -29,27 +29,27 @@ public class DatabaseService
 
     #region C R U D Operations
     //C
-    public async Task AddStudentAsync(Student student)
+    public async Task AddEmployeeAsync(Employee employee)
     {
-        await _database.InsertAsync(student);
+        await _database.InsertAsync(employee);
     }
 
     //R
-    public async Task<List<Student>> GetStudentsAsync()
+    public async Task<List<Employee>> GetEmployeeAsync()
     {
-        return await _database.Table<Student>().ToListAsync(); //SELECT * FROM STUDENT(TABLE)
+        return await _database.Table<Employee>().ToListAsync(); //SELECT * FROM EMPLOYEE(TABLE)
     }
 
     //U
-    public async Task UpdateStudentAsync(Student student)
+    public async Task UpdateEmployeeAsync(Employee employee)
     {
-        await _database.UpdateAsync(student);
+        await _database.UpdateAsync(employee);
     }
 
     //D
-    public async Task DeleteStudentAsync(Student student)
+    public async Task DeleteEmployeeAsync(Employee employee)
     {
-        await _database.DeleteAsync(student);
+        await _database.DeleteAsync(employee);
     }
     #endregion
 

@@ -7,7 +7,7 @@
         <Frame BackgroundColor="#F5F5DC" Padding="10" Margin="20">
             <StackLayout>
                 <Label Text="Staff Directory" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="0, 20" />
-                <!--Entry Fields for Student Information-->
+                <!--Entry Fields for Employee Information-->
 
                 <Entry Placeholder="Given Name" x:Name="GivenNameEntry" />
                 <Entry Placeholder="Family Name" x:Name="FamilyNameEntry" />
@@ -17,14 +17,14 @@
                 <Entry Placeholder="City" x:Name="CityEntry" />
                 <Entry Placeholder="State" x:Name="StateEntry" />
                 <Entry Placeholder="Zip Code" x:Name="ZipCodeEntry" />
-                <Entry Placeholder="Country" x:Name="StudentCountry" />
+                <Entry Placeholder="Country" x:Name="Country" />
                 <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />
 
-                <!-- Add Student Button -->
-                <Button Text="Add Student" Clicked="AddStudent_Clicked" HorizontalOptions="StartAndExpand" />
+                <!-- Add Employee Button -->
+                <Button Text="Add Employee" Clicked="AddEmployee_Clicked" HorizontalOptions="StartAndExpand" />
 
-                <!-- Student List View with Embedded Buttons and DatePicker -->
-                <ListView x:Name="StudentListView" HasUnevenRows="True">
+                <!-- Employee List View with Embedded Buttons and DatePicker -->
+                <ListView x:Name="EmployeeListView" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -105,7 +105,7 @@
                                                 <Label Text="{Binding Country}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
-                                            <!-- Student Information Cont. -->
+                                            <!-- Employee Information Cont. -->
                                             <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="9">
                                                 <Label Text="Enrollment Date:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding EnrollmentDate, StringFormat='{0:dd/MM/yyyy}'}" Margin="10,0,0,0"/>
@@ -113,8 +113,8 @@
 
                                             <!-- Buttons -->
                                             <StackLayout Orientation="Horizontal" Padding="5" Grid.Row="10">
-                                                <Button Text="Update" Clicked="UpdateStudent_Clicked"/>
-                                                <Button Text="Delete" Clicked="DeleteStudent_Clicked" Margin="10,0,0,0"/>
+                                                <Button Text="Update" Clicked="UpdateEmployee_Clicked"/>
+                                                <Button Text="Delete" Clicked="DeleteEmployee_Clicked" Margin="10,0,0,0"/>
                                                 <Button Text="Details" Clicked="ViewDetails_Clicked" Margin="10,0,0,0"/>
                                             </StackLayout>
                                         </Grid>

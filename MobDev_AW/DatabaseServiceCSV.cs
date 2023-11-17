@@ -49,9 +49,9 @@ namespace MobDev_AW
         }
 
         #region C R U D Operations on CSV
-        public async Task<List<Student>> GetStudentsAsync()
+        public async Task<List<Employee>> GetStudentsAsync()
         {
-            List<Student> students = new List<Student>();
+            List<Employee> students = new List<Employee>();
 
             try
             {
@@ -62,7 +62,7 @@ namespace MobDev_AW
                         using (var reader = new StreamReader(csvFilePath))
                         using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                         {
-                            students = csv.GetRecords<Student>().ToList();
+                            students = csv.GetRecords<Employee>().ToList();
                         }
                     });
                 }
@@ -75,7 +75,7 @@ namespace MobDev_AW
             return students;
         }
 
-        public async Task AddStudentAsync(Student student)
+        public async Task AddStudentAsync(Employee student)
         {
             try
             {
@@ -95,7 +95,7 @@ namespace MobDev_AW
             }
         }
 
-        public async Task UpdateStudentAsync(Student student)
+        public async Task UpdateStudentAsync(Employee student)
         {
             try
             {
@@ -123,7 +123,7 @@ namespace MobDev_AW
             }
         }
 
-        public async Task DeleteStudentAsync(Student student)
+        public async Task DeleteStudentAsync(Employee student)
         {
             try
             {
