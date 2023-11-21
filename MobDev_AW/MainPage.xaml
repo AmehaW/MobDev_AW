@@ -31,6 +31,11 @@
                                 <Grid>
                                     <Frame CornerRadius="10" Margin="10" BackgroundColor="#F0F0F0">
                                         <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="Auto"/>
                                                 <RowDefinition Height="Auto"/>
@@ -52,71 +57,94 @@
                                             </StackLayout>-->
 
                                             <!-- Given Name -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="0">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="0" Grid.Column="0">
                                                 <Label Text="Given Name:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding GivenName}"/>
                                             </StackLayout>
 
                                             <!-- Family Name -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="1">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="1" Grid.Column="0">
                                                 <Label Text="Family Name:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding FamilyName}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- Phone -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="2">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="2" Grid.Column="0">
                                                 <Label Text="Phone:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding Phone}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- Department -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="3">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="3" Grid.Column="0">
                                                 <Label Text="Department:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding Department}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- Street -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="4">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="4" Grid.Column="0">
                                                 <Label Text="Street:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding Street}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- City -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="5">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="5" Grid.Column="0">
                                                 <Label Text="City:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding City}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- State -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="6">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="6" Grid.Column="0">
                                                 <Label Text="State:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding State}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- Zip Code -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="7">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="7" Grid.Column="0">
                                                 <Label Text="Zip Code:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding ZipCode}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- Country -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="8">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="8" Grid.Column="0">
                                                 <Label Text="Country:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding Country}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- Employee Information Cont. -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="9">
+                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="9" Grid.Column="0">
                                                 <Label Text="Enrollment Date:" Padding="0,0,2,0"/>
                                                 <Label Text="{Binding EnrollmentDate, StringFormat='{0:dd/MM/yyyy}'}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
                                             <!-- Buttons -->
-                                            <StackLayout Orientation="Horizontal" Padding="5" Grid.Row="10">
+                                            <StackLayout Orientation="Horizontal" Padding="5" Grid.Row="10"  Grid.ColumnSpan="2">
                                                 <Button Text="Update" Clicked="UpdateEmployee_Clicked"/>
                                                 <Button Text="Delete" Clicked="DeleteEmployee_Clicked" Margin="10,0,0,0"/>
                                                 <Button Text="Details" Clicked="ViewDetails_Clicked" Margin="10,0,0,0"/>
                                             </StackLayout>
+                                            
+                                            
+                                            <!-- trial bottons Buttons -->
+                                            <!--<StackLayout Orientation="Vertical" Padding="5" Grid.Column="1" Grid.Row = "0" Grid.RowSpan="6">
+                                                <Image
+                                                    Source="dotnet_bot.svg" 
+                                                    HeightRequest="100"
+                                                    VerticalOptions="Center" />
+                                            </StackLayout>-->
+
+                                            <BoxView Grid.Column="1" Grid.Row = "1" Grid.RowSpan="2"  Color="LightGray" />
+
+                                            <Label Grid.Column="1" Grid.Row = "1" Grid.RowSpan="2"  Text="load picture here" 
+                                                   HorizontalOptions="Center"  VerticalOptions="Center" />
+
+                                            <StackLayout Orientation="Vertical" Padding="5" Grid.Column="1" Grid.Row = "5" Grid.RowSpan="3">
+                                                <Button Text="Upload picture" Clicked="UploadPic_Clicked" Margin="5,0,0,0"
+                                                        VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                                                <Button Text="Delete picture" Clicked="DeletePic_Clicked" Margin="5,0,0,0"
+                                                        VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                                            </StackLayout>
+                                            
+                                            
                                         </Grid>
                                     </Frame>
                                 </Grid>

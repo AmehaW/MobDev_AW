@@ -125,5 +125,17 @@ namespace MobDev_AW
             LoadEmployeeAsync();
             //Add UI refresh command here
         }
+
+        // trial for image
+        private async void UploadPic_Clicked(object sender, EventArgs e)
+        {
+           
+        }
+
+        private async void DeletePic_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
