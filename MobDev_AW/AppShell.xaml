@@ -6,6 +6,30 @@
     xmlns:local="clr-namespace:MobDev_AW"
     Shell.FlyoutBehavior="Flyout">
 
+    <TabBar>
+        <Tab Title="Home">
+            <ShellContent
+ ContentTemplate="{DataTemplate local:MainPage}"
+ Route="MainPage" />
+        </Tab>
+
+        <Tab Title="Staff Directory">
+            <ShellContent
+ContentTemplate="{DataTemplate local:StaffDirectory}"
+Route="StaffDirectory" />
+        </Tab>
+
+
+        <Tab Title="Add Employee">
+            <ShellContent
+ContentTemplate="{DataTemplate local:AddEmployee}"
+Route="AddEmployee" />
+        </Tab>
+
+
+    </TabBar>
+    
+    
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
@@ -14,5 +38,8 @@
         Title="Settings"
         ContentTemplate="{DataTemplate local:Settings}"
         Route="Settings" />
+
+
     
+
 </Shell>

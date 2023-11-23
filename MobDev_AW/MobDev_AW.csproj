@@ -59,12 +59,21 @@
 	  <Compile Update="EmployeeDetails.xaml.cs">
 	    <DependentUpon>EmployeeDetails.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="StaffDirectory.xaml.cs">
+	    <DependentUpon>StaffDirectory.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="UpdateEmployee.xaml.cs">
 	    <DependentUpon>UpdateEmployee.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="AddEmployee.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="StaffDirectory.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Settings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
