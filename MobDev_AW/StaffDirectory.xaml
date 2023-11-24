@@ -9,7 +9,7 @@
                 <Label Text="Staff Directory" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="0, 20" />
                 <!--Entry Fields for Employee Information-->
 
-                <Entry Placeholder="Given Name" x:Name="GivenNameEntry" />
+                <!--<Entry Placeholder="Given Name" x:Name="GivenNameEntry" />
                 <Entry Placeholder="Family Name" x:Name="FamilyNameEntry" />
                 <Entry Placeholder="Phone" x:Name="PhoneEntry" />
                 <Entry Placeholder="Department" x:Name="DepartmentEntry" />
@@ -18,10 +18,10 @@
                 <Entry Placeholder="State" x:Name="StateEntry" />
                 <Entry Placeholder="Zip Code" x:Name="ZipCodeEntry" />
                 <Entry Placeholder="Country" x:Name="Country" />
-                <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />
+                <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />-->
 
-                <!-- Add Employee Button -->
-                <Button Text="Add Employee" Clicked="AddEmployee_Clicked" HorizontalOptions="StartAndExpand" />
+                <!-- Add Employee Button --><!--
+                <Button Text="Add Employee" Clicked="AddEmployee_Clicked" HorizontalOptions="StartAndExpand" />-->
 
                 <!-- Employee List View with Embedded Buttons and DatePicker -->
                 <ListView x:Name="EmployeeListView" HasUnevenRows="True">

@@ -93,37 +93,37 @@ public partial class StaffDirectory : ContentPage
 
     // Event handler for adding a new employee
     //Visual bug, Consider moving to new Add Employee page.
-    private async void AddEmployee_Clicked(object sender, EventArgs e)
-    {
-        var newEmployee = new Employee
-        {
-            GivenName = GivenNameEntry.Text,
-            FamilyName = FamilyNameEntry.Text,
-            Phone = PhoneEntry.Text,
-            Department = DepartmentEntry.Text,
-            Street = StreetEntry.Text,
-            City = CityEntry.Text,
-            State = StateEntry.Text,
-            ZipCode = ZipCodeEntry.Text,
-            Country = Country.Text,
-            EnrollmentDate = EnrollmentDatePicker.Date
+    //private async void AddEmployee_Clicked(object sender, EventArgs e)
+    //{
+    //    var newEmployee = new Employee
+    //    {
+    //        GivenName = GivenNameEntry.Text,
+    //        FamilyName = FamilyNameEntry.Text,
+    //        Phone = PhoneEntry.Text,
+    //        Department = DepartmentEntry.Text,
+    //        Street = StreetEntry.Text,
+    //        City = CityEntry.Text,
+    //        State = StateEntry.Text,
+    //        ZipCode = ZipCodeEntry.Text,
+    //        Country = Country.Text,
+    //        EnrollmentDate = EnrollmentDatePicker.Date
 
-        };
+    //    };
 
-        //SQLite Version
-        await _databaseServiceSQL.AddEmployeeAsync(newEmployee);
+        ////SQLite Version
+        //await _databaseServiceSQL.AddEmployeeAsync(newEmployee);
 
-        //CSV Version
-        //await _databaseServiceCSV.AddEmployeeAsync(newEmployee);
+        ////CSV Version
+        ////await _databaseServiceCSV.AddEmployeeAsync(newEmployee);
 
-        //Un-comment for pop-ups/troubleshooting
-        //await DisplayAlert("Add Employee","You Added an Employee","Ok");
+        ////Un-comment for pop-ups/troubleshooting
+        ////await DisplayAlert("Add Employee","You Added an Employee","Ok");
 
-        GivenNameEntry.Text = FamilyNameEntry.Text = PhoneEntry.Text = DepartmentEntry.Text =
-            StreetEntry.Text = CityEntry.Text = StateEntry.Text = ZipCodeEntry.Text = Country.Text = string.Empty;
-        LoadEmployeeAsync();
-        //Add UI refresh command here
-    }
+        //GivenNameEntry.Text = FamilyNameEntry.Text = PhoneEntry.Text = DepartmentEntry.Text =
+        //    StreetEntry.Text = CityEntry.Text = StateEntry.Text = ZipCodeEntry.Text = Country.Text = string.Empty;
+        //LoadEmployeeAsync();
+        ////Add UI refresh command here
+    //}
 
     // trial for image
     private async void UploadPic_Clicked(object sender, EventArgs e)

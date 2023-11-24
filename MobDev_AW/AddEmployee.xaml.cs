@@ -27,7 +27,7 @@ public partial class AddEmployee : ContentPage
         //_databaseServiceSQL.ClearDatabase();
 
         //Load Employee
-        LoadEmployeeAsync();
+        //LoadEmployeeAsync();
     }
 
     protected override void OnAppearing()
@@ -35,7 +35,7 @@ public partial class AddEmployee : ContentPage
         base.OnAppearing();
 
         // Load employees from the database every time the page appears
-        LoadEmployeeAsync();
+        //LoadEmployeeAsync();
     }
 
     private async void UpdateEmployee_Clicked(object sender, EventArgs e)
@@ -60,36 +60,36 @@ public partial class AddEmployee : ContentPage
 
             //await DisplayAlert("Delete Employee", "You Deleted an employee", "Ok");
             // Reload the employees list after deletion
-            LoadEmployeeAsync();
+            //LoadEmployeeAsync();
         }
     }
 
 
-    private async void ViewDetails_Clicked(object sender, EventArgs e)
-    {
-        var selectedEmployee = (Employee)((Button)sender).BindingContext;
-        await Navigation.PushAsync(new EmployeeDetails(selectedEmployee));
-    }
+    //private async void ViewDetails_Clicked(object sender, EventArgs e)
+    //{
+    //    var selectedEmployee = (Employee)((Button)sender).BindingContext;
+    //    await Navigation.PushAsync(new EmployeeDetails(selectedEmployee));
+    //}
 
 
-    private async void LoadEmployeeAsync()
-    {
-        try
-        {
-            //SQLite Version
-            _employee = await _databaseServiceSQL.GetEmployeeAsync();
+    //private async void LoadEmployeeAsync()
+    //{
+    //    try
+    //    {
+    //        //SQLite Version
+    //        _employee = await _databaseServiceSQL.GetEmployeeAsync();
 
-            //await DisplayAlert("Loading Employee", "Loading Check", "Ok");
-            //CSV Version
-            //_employee = await _databaseServiceCSV.GetEmployeeAsync();
+    //        //await DisplayAlert("Loading Employee", "Loading Check", "Ok");
+    //        //CSV Version
+    //        //_employee = await _databaseServiceCSV.GetEmployeeAsync();
 
-            EmployeeListView.ItemsSource = _employee;
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Exception: {ex}");
-        }
-    }
+    //        EmployeeListView.ItemsSource = _employee;
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        Console.WriteLine($"Exception: {ex}");
+    //    }
+    //}
 
     // Event handler for adding a new employee
     //Visual bug, Consider moving to new Add Employee page.
@@ -121,7 +121,7 @@ public partial class AddEmployee : ContentPage
 
         GivenNameEntry.Text = FamilyNameEntry.Text = PhoneEntry.Text = DepartmentEntry.Text =
             StreetEntry.Text = CityEntry.Text = StateEntry.Text = ZipCodeEntry.Text = Country.Text = string.Empty;
-        LoadEmployeeAsync();
+        //LoadEmployeeAsync();
         //Add UI refresh command here
     }
 
