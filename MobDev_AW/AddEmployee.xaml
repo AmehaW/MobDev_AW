@@ -4,26 +4,47 @@
              x:Class="MobDev_AW.AddEmployee"
              Title="AddEmployee">
     <ScrollView>
-        <Frame BackgroundColor="#D9D9D9" Padding="10" Margin="20">
+        <Frame BackgroundColor="#941a1d" Padding="10" Margin="20">
             <StackLayout>
                 <Label Text="Add Employee" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="0, 20" />
-                <!--Entry Fields for Employee Information-->
 
-                <Entry Placeholder="Given Name" x:Name="GivenNameEntry" BackgroundColor="#ffffff"/>
-                <Entry Placeholder="Family Name" x:Name="FamilyNameEntry" BackgroundColor="#ffffff"/>
-                <Entry Placeholder="Phone" x:Name="PhoneEntry" BackgroundColor="#ffffff"/>
-                <Entry Placeholder="Department" x:Name="DepartmentEntry" BackgroundColor="#ffffff"/>
-                <Entry Placeholder="Street" x:Name="StreetEntry" BackgroundColor="#ffffff"/>
-                <Entry Placeholder="City" x:Name="CityEntry" BackgroundColor="#ffffff"/>
-                <Entry Placeholder="State" x:Name="StateEntry" BackgroundColor="#ffffff"/>
-                <Entry Placeholder="Zip Code" x:Name="ZipCodeEntry" BackgroundColor="#ffffff"/>
-                <Entry Placeholder="Country" x:Name="Country" BackgroundColor="#ffffff"/>
-                <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />
+               
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+ 
+                    <Label Grid.Column="0" Text="Add Staff" FontSize="24"  HorizontalOptions="Center"  VerticalOptions="Center" />
 
-                <!-- Add Employee Button -->
-                <Button Text="Add Employee" TextColor="White" FontAttributes="Bold" Clicked="AddEmployee_Clicked" HorizontalOptions="StartAndExpand" 
+                    <Label Grid.Column="1" Text="ROI logo" FontSize="24" BackgroundColor="White" HorizontalTextAlignment="End"/>
+
+                </Grid>
+
+               
+
+                <Frame BackgroundColor="#D9D9D9" Padding="10" Margin="20">
+                    <StackLayout>
+                        <Label Text="Add Employee" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="0, 20" />
+                        <!--Entry Fields for Employee Information-->
+
+                        <Entry Placeholder="Given Name" x:Name="GivenNameEntry" BackgroundColor="#ffffff"/>
+                        <Entry Placeholder="Family Name" x:Name="FamilyNameEntry" BackgroundColor="#ffffff"/>
+                        <Entry Placeholder="Phone" x:Name="PhoneEntry" BackgroundColor="#ffffff"/>
+                        <Entry Placeholder="Department" x:Name="DepartmentEntry" BackgroundColor="#ffffff"/>
+                        <Entry Placeholder="Street" x:Name="StreetEntry" BackgroundColor="#ffffff"/>
+                        <Entry Placeholder="City" x:Name="CityEntry" BackgroundColor="#ffffff"/>
+                        <Entry Placeholder="State" x:Name="StateEntry" BackgroundColor="#ffffff"/>
+                        <Entry Placeholder="Zip Code" x:Name="ZipCodeEntry" BackgroundColor="#ffffff"/>
+                        <Entry Placeholder="Country" x:Name="Country" BackgroundColor="#ffffff"/>
+                        <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />
+
+                         <!-- Add Employee Button -->
+                        <Button Text="Add Employee" TextColor="White" FontAttributes="Bold" Clicked="AddEmployee_Clicked" HorizontalOptions="StartAndExpand" 
                         BackgroundColor="#3b3b3b"/>
-                                          
+                                         
+                     </StackLayout>
+                </Frame>
             </StackLayout>
         </Frame>
     </ScrollView>
