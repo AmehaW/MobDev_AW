@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\brand_attern_1.png" />
+	  <None Remove="Resources\Images\placeholder_male.png" />
 	  <None Remove="Resources\Images\roi_logo_monochrome.png" />
 	</ItemGroup>
 

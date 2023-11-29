@@ -4,57 +4,56 @@
              x:Class="MobDev_AW.StaffDirectory"
              Title="StaffDirectory">
     <ScrollView>
-        <Frame BackgroundColor="#F5F5DC" Padding="10" Margin="20">
-            <StackLayout>
-                <Label Text="Staff Directory" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="0, 20" />
-                <!--Entry Fields for Employee Information-->
+        <Frame BackgroundColor="#941a1d" Padding="10" Margin="20">
+            <StackLayout >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width="50*" />
+                    </Grid.ColumnDefinitions>
 
-                <!--<Entry Placeholder="Given Name" x:Name="GivenNameEntry" />
-                <Entry Placeholder="Family Name" x:Name="FamilyNameEntry" />
-                <Entry Placeholder="Phone" x:Name="PhoneEntry" />
-                <Entry Placeholder="Department" x:Name="DepartmentEntry" />
-                <Entry Placeholder="Street" x:Name="StreetEntry" />
-                <Entry Placeholder="City" x:Name="CityEntry" />
-                <Entry Placeholder="State" x:Name="StateEntry" />
-                <Entry Placeholder="Zip Code" x:Name="ZipCodeEntry" />
-                <Entry Placeholder="Country" x:Name="Country" />
-                <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-                <!-- Add Employee Button --><!--
-                <Button Text="Add Employee" Clicked="AddEmployee_Clicked" HorizontalOptions="StartAndExpand" />-->
+                    <StackLayout Padding="15,0,0,0" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="0">
 
-                <!-- Employee List View with Embedded Buttons and DatePicker -->
+                        <Label Text="Staff Directory" FontSize="24" TextColor="white" HorizontalOptions="End"  VerticalOptions="End" />
+                    </StackLayout>
+
+
+                    <StackLayout Padding="15,0,0,0" VerticalOptions="End" HorizontalOptions="End" Grid.Column="1" Grid.Row="0">
+                        <Image Source="roi_logo_monochrome.png" MaximumHeightRequest="120" MaximumWidthRequest="120"/>
+                    </StackLayout>
+
+                </Grid>
+
                 <ListView x:Name="EmployeeListView" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <Grid>
-                                    <Frame CornerRadius="10" Margin="10" BackgroundColor="#F0F0F0">
+                                    <Frame BackgroundColor="#D9D9D9" Padding="10" Margin="20">
+                                        <Frame CornerRadius="10" Margin="5" BackgroundColor="White">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="50*" />
+                                                <ColumnDefinition Width="50*" />
                                             </Grid.ColumnDefinitions>
 
                                             <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="9.5*"/>
+                                                <RowDefinition Height="9.5*"/>
+                                                <RowDefinition Height="9.5*"/>
+                                                <RowDefinition Height="9.5*"/>
+                                                <RowDefinition Height="9.5*"/>
+                                                <RowDefinition Height="9.5*"/>
+                                                <RowDefinition Height="9.5*"/>
+                                                <RowDefinition Height="9.5*"/>
+                                                <RowDefinition Height="9.5*"/>
+                                                
+                                                <RowDefinition Height="14.5*"/>
                                             </Grid.RowDefinitions>
-
-                                            <!-- ID -->
-                                            <!--<StackLayout Orientation="Horizontal" Padding="10" Grid.Row="0">
-                                                <Label Text="ID:" Padding="0,0,2,0"/>
-                                                <Label Text="{Binding Id}" FontAttributes="Bold"/>
-                                            </StackLayout>-->
 
                                             <!-- Given Name -->
                                             <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="0" Grid.Column="0">
@@ -110,42 +109,36 @@
                                                 <Label Text="{Binding Country}" Margin="10,0,0,0"/>
                                             </StackLayout>
 
-                                            <!-- Employee Information Cont. -->
-                                            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="9" Grid.Column="0">
-                                                <Label Text="Enrollment Date:" Padding="0,0,2,0"/>
-                                                <Label Text="{Binding EnrollmentDate, StringFormat='{0:dd/MM/yyyy}'}" Margin="10,0,0,0"/>
-                                            </StackLayout>
-
                                             <!-- Buttons -->
-                                            <StackLayout Orientation="Horizontal" Padding="5" Grid.Row="10"  Grid.ColumnSpan="2">
-                                                <Button Text="Update" Clicked="UpdateEmployee_Clicked"/>
-                                                <Button Text="Delete" Clicked="DeleteEmployee_Clicked" Margin="10,0,0,0"/>
-                                                <Button Text="Details" Clicked="ViewDetails_Clicked" Margin="10,0,0,0"/>
+                                            <StackLayout Orientation="Horizontal" Padding="5" Grid.Row="9"  Grid.ColumnSpan="2">
+                                                    <Button Text="Update" Clicked="UpdateEmployee_Clicked" TextColor="White" FontAttributes="None" 
+                                                            BackgroundColor="#3b3b3b" MaximumHeightRequest="50" Scale="0.75" />
+                                                    <Button Text="Delete" Clicked="DeleteEmployee_Clicked" TextColor="White" FontAttributes="None" 
+                                                            BackgroundColor="#3b3b3b" MaximumHeightRequest="50" Margin="10,0,0,0" Scale="0.75"/>
+                                                    <Button Text="Details" Clicked="ViewDetails_Clicked" TextColor="White" FontAttributes="None" 
+                                                            BackgroundColor="#3b3b3b" MaximumHeightRequest="50" Margin="10,0,0,0" Scale="0.75"/>
                                             </StackLayout>
 
 
-                                            <!-- trial bottons Buttons -->
-                                            <!--<StackLayout Orientation="Vertical" Padding="5" Grid.Column="1" Grid.Row = "0" Grid.RowSpan="6">
-                                                <Image
-                                                    Source="dotnet_bot.svg" 
-                                                    HeightRequest="100"
-                                                    VerticalOptions="Center" />
-                                            </StackLayout>-->
+                                           
 
-                                            <BoxView Grid.Column="1" Grid.Row = "1" Grid.RowSpan="2"  Color="LightGray" />
+                                            
+                                                <StackLayout Orientation="Vertical" Padding="5" Grid.Column="1" Grid.Row = "0" Grid.RowSpan="3">
+                                                    <Image Source="placeholder_male.png" MaximumHeightRequest="120" MaximumWidthRequest="120"
+                                                           VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
 
-                                            <Label Grid.Column="1" Grid.Row = "1" Grid.RowSpan="2"  Text="load picture here" 
-                                                   HorizontalOptions="Center"  VerticalOptions="Center" />
+                                                </StackLayout>
 
-                                            <StackLayout Orientation="Vertical" Padding="5" Grid.Column="1" Grid.Row = "5" Grid.RowSpan="3">
-                                                <Button Text="Upload picture" Clicked="UploadPic_Clicked" Margin="5,0,0,0"
-                                                        VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
-                                                <Button Text="Delete picture" Clicked="DeletePic_Clicked" Margin="5,0,0,0"
-                                                        VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+
+                                                <StackLayout Orientation="Vertical" Padding="5" Grid.Column="1" Grid.Row = "4" Grid.RowSpan="2">
+                                                    <Button Text="Change" Clicked="UploadPic_Clicked"  TextColor="White" FontAttributes="None" 
+                                                            BackgroundColor="#3b3b3b" Margin="5,0,0,0" Scale="0.75"
+                                                            VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                                               
                                             </StackLayout>
-
 
                                         </Grid>
+                                        </Frame>
                                     </Frame>
                                 </Grid>
                             </ViewCell>

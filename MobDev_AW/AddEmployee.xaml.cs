@@ -106,8 +106,7 @@ public partial class AddEmployee : ContentPage
             State = StateEntry.Text,
             ZipCode = ZipCodeEntry.Text,
             Country = Country.Text,
-            EnrollmentDate = EnrollmentDatePicker.Date
-
+           
         };
 
         //SQLite Version

@@ -45,8 +45,7 @@
                         <Entry Placeholder="State" x:Name="StateEntry" BackgroundColor="#ffffff"/>
                         <Entry Placeholder="Zip Code" x:Name="ZipCodeEntry" BackgroundColor="#ffffff"/>
                         <Entry Placeholder="Country" x:Name="Country" BackgroundColor="#ffffff"/>
-                        <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />
-
+                        
                          <!-- Add Employee Button -->
                         <Button Text="Add Employee" TextColor="White" FontAttributes="Bold" Clicked="AddEmployee_Clicked" HorizontalOptions="StartAndExpand" 
                         BackgroundColor="#3b3b3b"/>
