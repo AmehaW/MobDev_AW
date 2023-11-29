@@ -29,8 +29,6 @@
 
                 </Grid>
 
-               
-
                 <Frame BackgroundColor="#D9D9D9" Padding="10" Margin="20">
                     <StackLayout>
                         
@@ -49,7 +47,7 @@
                          <!-- Add Employee Button -->
                         <Button Text="Add Employee" TextColor="White" FontAttributes="None" Clicked="AddEmployee_Clicked" 
                                 HorizontalOptions="StartAndExpand" BackgroundColor="#3b3b3b"
-                                MaximumHeightRequest="50" Scale="0.75"/>
+                                MaximumHeightRequest="50" Scale="1"/>
                                          
                      </StackLayout>
                 </Frame>

@@ -4,9 +4,36 @@
              x:Class="MobDev_AW.EmployeeDetails"
              Title="EmployeeDetails">
     <StackLayout>
-        <Frame BackgroundColor="#F5F5DC" Padding="10" Margin="20">
+        <Frame BackgroundColor="#941a1d" Padding="10" Margin="20">
             <StackLayout>
-                <!-- Display Student Details Here -->
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width="50*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Padding="15,0,0,0" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="0">
+
+                        <Label Text="Employee's details" FontSize="24" TextColor="white" HorizontalOptions="End"  VerticalOptions="End" />
+                    </StackLayout>
+
+
+                    <StackLayout Padding="15,0,0,0" VerticalOptions="End" HorizontalOptions="End" Grid.Column="1" Grid.Row="0">
+                        <Image Source="roi_logo_monochrome.png" MaximumHeightRequest="120" MaximumWidthRequest="120"/>
+                    </StackLayout>
+
+                </Grid>
+               
+                <Frame BackgroundColor="#D9D9D9" Padding="10" Margin="20">
+                    <StackLayout>
+
+
+                        <!-- Display Student Details Here -->
                 <Label Text="{Binding GivenName}" />
                 <Label Text="{Binding FamilyName}" />
                 <Label Text="{Binding Phone}" />
@@ -16,9 +43,10 @@
                 <Label Text="{Binding State}" />
                 <Label Text="{Binding ZipCode}" />
                 <Label Text="{Binding Country}" />
-                <Label Text="{Binding EnrollmentDate}" />
-
+                
                 <!-- Add any other details you want to display -->
+                    </StackLayout>
+                </Frame>
             </StackLayout>
         </Frame>
     </StackLayout>

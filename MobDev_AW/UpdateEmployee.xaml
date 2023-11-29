@@ -48,7 +48,7 @@
                         <!-- Update Button -->
                         <Button Text="Save" TextColor="White" FontAttributes="None" Clicked="Update_Clicked" 
                                 HorizontalOptions="StartAndExpand" BackgroundColor="#3b3b3b" 
-                                MaximumHeightRequest="50" MinimumWidthRequest="150" Scale="0.75"/>
+                                MaximumHeightRequest="50" MinimumWidthRequest="150" Scale="1"/>
                     </StackLayout>
                 </Frame>
 

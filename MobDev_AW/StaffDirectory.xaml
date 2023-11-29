@@ -112,11 +112,11 @@
                                             <!-- Buttons -->
                                             <StackLayout Orientation="Horizontal" Padding="5" Grid.Row="9"  Grid.ColumnSpan="2">
                                                     <Button Text="Update" Clicked="UpdateEmployee_Clicked" TextColor="White" FontAttributes="None" 
-                                                            BackgroundColor="#3b3b3b" MaximumHeightRequest="50" Scale="0.75" />
+                                                            BackgroundColor="#3b3b3b" MaximumHeightRequest="50" Scale="1" />
                                                     <Button Text="Delete" Clicked="DeleteEmployee_Clicked" TextColor="White" FontAttributes="None" 
-                                                            BackgroundColor="#3b3b3b" MaximumHeightRequest="50" Margin="10,0,0,0" Scale="0.75"/>
+                                                            BackgroundColor="#3b3b3b" MaximumHeightRequest="50" Margin="10,0,0,0" Scale="1"/>
                                                     <Button Text="Details" Clicked="ViewDetails_Clicked" TextColor="White" FontAttributes="None" 
-                                                            BackgroundColor="#3b3b3b" MaximumHeightRequest="50" Margin="10,0,0,0" Scale="0.75"/>
+                                                            BackgroundColor="#3b3b3b" MaximumHeightRequest="50" Margin="10,0,0,0" Scale="1"/>
                                             </StackLayout>
 
 
@@ -132,7 +132,7 @@
 
                                                 <StackLayout Orientation="Vertical" Padding="5" Grid.Column="1" Grid.Row = "4" Grid.RowSpan="2">
                                                     <Button Text="Change" Clicked="UploadPic_Clicked"  TextColor="White" FontAttributes="None" 
-                                                            BackgroundColor="#3b3b3b" Margin="5,0,0,0" Scale="0.75"
+                                                            BackgroundColor="#3b3b3b" Margin="5,0,0,0" Scale="1"
                                                             VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
                                                
                                             </StackLayout>
