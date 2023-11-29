@@ -47,8 +47,9 @@
                         <Entry Placeholder="Country" x:Name="Country" BackgroundColor="#ffffff"/>
                         
                          <!-- Add Employee Button -->
-                        <Button Text="Add Employee" TextColor="White" FontAttributes="Bold" Clicked="AddEmployee_Clicked" HorizontalOptions="StartAndExpand" 
-                        BackgroundColor="#3b3b3b"/>
+                        <Button Text="Add Employee" TextColor="White" FontAttributes="None" Clicked="AddEmployee_Clicked" 
+                                HorizontalOptions="StartAndExpand" BackgroundColor="#3b3b3b"
+                                MaximumHeightRequest="50" Scale="0.75"/>
                                          
                      </StackLayout>
                 </Frame>

@@ -26,8 +26,7 @@ public partial class UpdateEmployee : ContentPage
         StateEntry.Text = _selectedEmployee.State;
         ZipCodeEntry.Text = _selectedEmployee.ZipCode;
         CountryEntry.Text = _selectedEmployee.Country;
-        EnrollmentDatePicker.Date = _selectedEmployee.EnrollmentDate;
-
+        
         //CSV Version
         //CSV Passed
         _databaseServiceCSV = databaseServiceCSV;
@@ -45,8 +44,7 @@ public partial class UpdateEmployee : ContentPage
         _selectedEmployee.State = StateEntry.Text;
         _selectedEmployee.ZipCode = ZipCodeEntry.Text;
         _selectedEmployee.Country = CountryEntry.Text;
-        _selectedEmployee.EnrollmentDate = EnrollmentDatePicker.Date;
-
+       
         // SQLite Version
         // Call the database service to update the emploee
         await _databaseServiceSQL.UpdateEmployeeAsync(_selectedEmployee);

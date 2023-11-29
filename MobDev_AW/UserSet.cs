@@ -8,9 +8,6 @@ public class UserSet
     public string Name { get; set; }
     public int Age { get; set; }
     public bool lightOrDark { get; set; }
-
-    //public string SomeEntry { get; set; }
-
     public int SavedFontSize { get; set; }
     public float SavedBrightness { get; set; }
     public string SavedFontFamily { get; set; }

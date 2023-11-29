@@ -4,23 +4,58 @@
              x:Class="MobDev_AW.UpdateEmployee"
              Title="UpdateEmployee">
     <ContentPage.Content>
-        <Frame BackgroundColor="#F5F5DC" Padding="10" Margin="20">
-            <StackLayout>
-                <!-- Input Fields for Updating Employee Details -->
-                <Entry Placeholder="Given Name" x:Name="GivenNameEntry"  />
-                <Entry Placeholder="Family Name" x:Name="FamilyNameEntry" />
-                <Entry Placeholder="Phone" x:Name="PhoneEntry" />
-                <Entry Placeholder="Department" x:Name="DepartmentEntry" />
-                <Entry Placeholder="Street" x:Name="StreetEntry" />
-                <Entry Placeholder="City" x:Name="CityEntry" />
-                <Entry Placeholder="State" x:Name="StateEntry" />
-                <Entry Placeholder="Zip Code" x:Name="ZipCodeEntry" />
-                <Entry Placeholder="Country" x:Name="CountryEntry" />
-                <DatePicker x:Name="EnrollmentDatePicker" Date="{Binding EnrollmentDate}" />
 
-                <!-- Update Button -->
-                <Button Text="Update" Clicked="Update_Clicked" />
+        <Frame BackgroundColor="#941a1d" Padding="10" Margin="20">
+            <StackLayout>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width="50*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Padding="15,0,0,0" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="0">
+
+                        <Label Text="Update" FontSize="24" TextColor="white" HorizontalOptions="End"  VerticalOptions="End" />
+                    </StackLayout>
+
+
+                    <StackLayout Padding="15,0,0,0" VerticalOptions="End" HorizontalOptions="End" Grid.Column="1" Grid.Row="0">
+                        <Image Source="roi_logo_monochrome.png" MaximumHeightRequest="120" MaximumWidthRequest="120"/>
+                    </StackLayout>
+
+                </Grid>
+
+
+                <Frame BackgroundColor="#D9D9D9" Padding="10" Margin="20">
+                    <StackLayout>
+                        <!-- Input Fields for Updating Employee Details -->
+                        <Entry Placeholder="Given Name" x:Name="GivenNameEntry" BackgroundColor="#ffffff" />
+                        <Entry Placeholder="Family Name" x:Name="FamilyNameEntry" BackgroundColor="#ffffff"/>
+                        <Entry Placeholder="Phone" x:Name="PhoneEntry" BackgroundColor="#ffffff" />
+                        <Entry Placeholder="Department" x:Name="DepartmentEntry" BackgroundColor="#ffffff"/>
+                        <Entry Placeholder="Street" x:Name="StreetEntry" BackgroundColor="#ffffff" />
+                        <Entry Placeholder="City" x:Name="CityEntry" BackgroundColor="#ffffff" />
+                        <Entry Placeholder="State" x:Name="StateEntry" BackgroundColor="#ffffff" />
+                        <Entry Placeholder="Zip Code" x:Name="ZipCodeEntry" BackgroundColor="#ffffff" />
+                        <Entry Placeholder="Country" x:Name="CountryEntry" BackgroundColor="#ffffff" />
+
+
+                        <!-- Update Button -->
+                        <Button Text="Save" TextColor="White" FontAttributes="None" Clicked="Update_Clicked" 
+                                HorizontalOptions="StartAndExpand" BackgroundColor="#3b3b3b" 
+                                MaximumHeightRequest="50" MinimumWidthRequest="150" Scale="0.75"/>
+                    </StackLayout>
+                </Frame>
+
             </StackLayout>
         </Frame>
+
+
+
     </ContentPage.Content>
 </ContentPage>
