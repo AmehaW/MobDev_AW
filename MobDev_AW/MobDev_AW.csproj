@@ -49,6 +49,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Trebuchet-MS-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Trebuchet-MS-Italic.ttf" />
+	  <None Remove="Resources\Fonts\Trebuchet-MS.ttf" />
 	  <None Remove="Resources\Images\brand_attern_1.png" />
 	  <None Remove="Resources\Images\placeholder_male.png" />
 	  <None Remove="Resources\Images\roi_logo_monochrome.png" />
